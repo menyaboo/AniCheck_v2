@@ -3,6 +3,7 @@ import {colors, sizes} from "./variables";
 import {Colors, Sizes} from "../types/Variablres";
 
 export const ScreenView = styled.ScrollView`
+  position: relative;
   flex: 1;
   background-color: ${colors.background};
   padding-bottom: 55px;
