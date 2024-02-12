@@ -7,6 +7,7 @@ export const ProfileView = styled.View`
   display: flex;
   gap: 15px;
   flex-direction: row;
+  justify-content: space-between;
 `
 
 export const ImageTitle = styled.Image`
@@ -18,6 +19,7 @@ export const ImageTitle = styled.Image`
 export const ProfileMainView = styled.View`
   display: flex;
   flex-direction: column;
+  
 `
 
 export const ProfileInfoView = styled.View`

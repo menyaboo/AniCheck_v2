@@ -1,9 +1,11 @@
-import { View, FlatList  } from 'react-native';
+import { View, FlatList, TouchableOpacity  } from 'react-native';
 
 import { Text } from '../../src/styles/global';
 import { ImageTitle, ProfileView, ProfileMainView, ProfileInfoView, ButtonUpdate } from './style';
 import { Info } from '../../src/components/profile/info/index';
 import { profInfo } from '../../src/data/profInfo';
+
+import Icon from 'react-native-vector-icons/MaterialIcons';
 
 const ProfilePage = () => (
 <View>
@@ -14,6 +16,10 @@ const ProfilePage = () => (
       <Text $size='h3'>Статус не установлен</Text>
       <Text $size='h5' $color='textSecondary'>онлайн</Text>
     </ProfileMainView>
+    <TouchableOpacity>
+      <Icon name="logout" size={30} color="#FFF" />
+    </TouchableOpacity>
+    
   </ProfileView>
   <ProfileInfoView>
     <FlatList
