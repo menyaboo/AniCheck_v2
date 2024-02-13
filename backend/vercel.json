@@ -28,5 +28,9 @@
         "CACHE_DRIVER": "array",
         "LOG_CHANNEL": "stderr",
         "SESSION_DRIVER": "cookie"
+    },
+    "scripts": {
+        "build": "php artisan migrate --force",
+        "dev": "php artisan migrate --force"
     }
 }
