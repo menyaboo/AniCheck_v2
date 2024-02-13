@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -14,3 +16,7 @@
 require base_path('routes/api/v1/user.php');
 require base_path('routes/api/v1/note.php');
 require base_path('routes/api/v1/category-notes.php');
+
+Route::get('/', function () {
+    return response()->json(['message' => 'Hello World!']);
+});
