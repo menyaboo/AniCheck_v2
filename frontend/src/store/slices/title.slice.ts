@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { ITitle } from '../types/ITitle';
+import { ITitle } from '../../types/ITitle';
 
 export interface TitleState {
   title: ITitle | null;

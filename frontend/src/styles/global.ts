@@ -16,6 +16,21 @@ export const Text = styled.Text<{ $color?: Colors, $size?: Sizes }>`
 
 export const CentredView = styled.View`
   flex: 1;
+  margin-top: 85%;
   justify-content: center;
+`
+
+export const ButtonStyled = styled.TouchableOpacity`
+  background-color: ${colors.backgroundSecondary};
+  padding: 10px 20px;
+  margin: 0 20px;
+  border-radius: 5px;
   align-items: center;
+`;
+
+export const TextInput = styled.TextInput` 
+  border-radius: 5px;
+  margin: 0 20px;
+  background-color: ${colors.background};
+  border: 1px solid ${colors.backgroundSecondary};
 `

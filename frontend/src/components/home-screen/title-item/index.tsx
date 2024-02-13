@@ -11,7 +11,7 @@ import {colors} from "../../../styles/variables";
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import {router} from "expo-router";
 import {useDispatch} from "react-redux";
-import {setTitle} from "../../../store/title.slice";
+import {setTitle} from "../../../store/slices/title.slice";
 
 type Props = {
   title: ITitle

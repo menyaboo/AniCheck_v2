@@ -1,6 +1,6 @@
 import { ProfileInfoView } from './style';
 import {FC} from "react";
-import { Text } from '../../../../src/styles/global';
+import { Text } from '../../../styles/global';
 import {ProfileInfo} from "../../../types/ProfileInfo";
 
 export const Info: FC<ProfileInfo> = ({ name, number }) => (

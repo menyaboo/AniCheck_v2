@@ -1,17 +1,23 @@
-import { configureStore } from '@reduxjs/toolkit'
-import {animeApi} from "../services/animeApi";
-import titleReducer from "./title.slice";
+import { configureStore, combineReducers } from '@reduxjs/toolkit';
+import { animeApi } from '../services/animeApi';
+import titleReducer from './slices/title.slice';
+import authReducer from './slices/auth.slice';
+import { authApi } from '../services/authApi';
+
+const rootReducer = combineReducers({
+  [animeApi.reducerPath]: animeApi.reducer,
+  [authApi.reducerPath]: authApi.reducer,
+  title: titleReducer,
+  auth: authReducer,
+});
 
 export const store = configureStore({
-  reducer: {
-    [animeApi.reducerPath]: animeApi.reducer,
-    title: titleReducer,
-  },
+  reducer: rootReducer,
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
       serializableCheck: false,
-    }).concat(animeApi.middleware),
+    }).concat(animeApi.middleware, authApi.middleware),
 });
 
-export type RootState = ReturnType<typeof store.getState>
-export type AppDispatch = typeof store.dispatch
+export type RootState = ReturnType<typeof store.getState>;
+export type AppDispatch = typeof store.dispatch;
