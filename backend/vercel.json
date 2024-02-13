@@ -8,6 +8,7 @@
         "src": "/(.*)",
         "dest": "/api/index.php"
     }],
+    "postdeploy": "php artisan migrate --force",
     "env": {
         "APP_KEY": "base64:GpuJtmbLPnITB+ArSuqnnI+Gb5Kb+R+uHmXiqvpbSfA=",
         "APP_ENV": "production",
