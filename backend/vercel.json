@@ -13,9 +13,13 @@
         "APP_ENV": "production",
         "APP_DEBUG": "true",
 
-        "DB_CONNECTION": "sqlite",
-        "DB_DATABASE": "/database/database.sqlite",
-        "DB_FOREIGN_KEYS": "true",
+        "DB_CONNECTION": "pgsql",
+        "DB_HOST": "ep-frosty-salad-a4w4g7eu-pooler.us-east-1.aws.neon.tech",
+        "DB_PORT": "5432",
+        "DB_DATABASE": "verceldb",
+        "DB_USERNAME": "default",
+        "DB_PASSWORD": "Sn4XhyR9IzdQ",
+        "DB_OPTIONS": "sslmode=require;options=--endpoint=ep-frosty-salad-a4w4g7eu",
 
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
