@@ -14,7 +14,7 @@
         "APP_DEBUG": "true",
 
         "DB_CONNECTION": "sqlite",
-        "DB_DATABASE": "../database/mydb.sqlite",
+        "DATABASE_URL": "../database/mydb.sqlite",
         "DB_FOREIGN_KEYS": "true",
 
         "APP_CONFIG_CACHE": "/tmp/config.php",
