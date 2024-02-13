@@ -15,11 +15,11 @@
         "APP_URL": "https://anime-check-v2.com",
 
         "DB_CONNECTION": "pgsql",
-        "DB_HOST": "/tmp/.yb.127.0.0.1",
-        "DB_PORT": "5433",
-        "DB_DATABASE": "ani-check-v2-n1",
-        "DB_USERNAME": "admin",
-        "DB_PASSWORD": "dyunG5KXK7Pla4p6O-Kwm_YErKgJf1",
+        "DB_HOST": "postgres://default:Sn4XhyR9IzdQ@ep-frosty-salad-a4w4g7eu-pooler.us-east-1.aws.neon.tech",
+        "DB_PORT": "5432",
+        "DB_DATABASE": "verceldb",
+        "DB_USERNAME": "default",
+        "DB_PASSWORD": "Sn4XhyR9IzdQ",
 
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
