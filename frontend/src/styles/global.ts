@@ -16,14 +16,17 @@ export const Text = styled.Text<{ $color?: Colors, $size?: Sizes }>`
 
 export const CentredView = styled.View`
   flex: 1;
-  margin-top: 85%;
+  margin-top: 40%;
   justify-content: center;
+  align-items: center;
+  width: 100%;
 `
 
 export const ButtonStyled = styled.TouchableOpacity`
   background-color: ${colors.backgroundSecondary};
   padding: 10px 20px;
   margin: 0 20px;
+  width: 90%;
   border-radius: 5px;
   align-items: center;
 `;
