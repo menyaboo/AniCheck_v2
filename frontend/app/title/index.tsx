@@ -1,19 +1,18 @@
-import {useSelector} from "react-redux";
-import {router} from "expo-router";
-import {WebView} from 'react-native-webview';
-
-import {ScreenView} from "../../src/styles/global";
-import {colors} from "../../src/styles/variables";
-import {TitleItem} from '../../src/components/home-screen/title-item';
-import {RootState} from "../../src/store";
+import React, { useState } from 'react';
+import { useSelector } from "react-redux";
+import { router } from "expo-router";
+import { WebView } from 'react-native-webview';
+import { ScreenView } from "../../src/styles/global";
+import { colors, sizes } from "../../src/styles/variables";
+import { TitleItem } from '../../src/components/home-screen/title-item';
+import { RootState } from "../../src/store";
+import {Text, CentredView} from "../../src/styles/global";
 import { View } from "react-native";
-import React, { useState } from "react";
 import RNPickerSelect from 'react-native-picker-select';
 
 const TitlePage = () => {
   const title = useSelector((state: RootState) => state.title.title);
-
-const [selectedValue, setSelectedValue] = useState('');
+  const [selectedValue, setSelectedValue] = useState('');
 
   const items = [
     { label: 'Просмотренно', value: 'viewed' },
@@ -23,10 +22,29 @@ const [selectedValue, setSelectedValue] = useState('');
     { label: 'Смотрю', value: 'watching' },
   ];
 
-  if (title === null)
-    return router.push('/not-found')
-  
-  const {player} = title
+  if (!title) {
+    return router.push('/not-found');
+  }
+
+  const { player } = title;
+
+  if (!title.player.alternative_player) {
+    return (
+      <ScreenView>
+        <TitleItem title={title} isDisabled={true} />
+        <View>
+          <RNPickerSelect
+            onValueChange={(value) => setSelectedValue(value)}
+            items={items}
+            placeholder={{ label: 'Сохранить в заметки...', value: 'null' }}
+          />
+        </View>
+        <CentredView>
+          <Text $color="text" $size="h2">Видео отжали в Api ^_^</Text>
+        </CentredView>
+        </ScreenView>
+    );
+  }
 
   const htmlContent = `
     <!doctype html>
@@ -65,7 +83,7 @@ const [selectedValue, setSelectedValue] = useState('');
 
   return (
     <ScreenView>
-      <TitleItem title={title} isDisabled={true}/>
+      <TitleItem title={title} isDisabled={true} />
       <View>
         <RNPickerSelect
           onValueChange={(value) => setSelectedValue(value)}
@@ -74,13 +92,12 @@ const [selectedValue, setSelectedValue] = useState('');
         />
       </View>
       <WebView
-        style={{ marginBottom: 100, height: 300, width: '100%'}}
-        source={{html: htmlContent}}
+        allowsFullscreenVideo
+        style={{ marginBottom: 100, height: 300, width: '100%' }}
+        source={{ html: htmlContent }}
       />
     </ScreenView>
   );
-
-
 };
 
-export default TitlePage
+export default TitlePage;
