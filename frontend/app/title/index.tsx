@@ -25,9 +25,6 @@ const [selectedValue, setSelectedValue] = useState('');
 
   if (title === null)
     return router.push('/not-found')
-
-  if (title?.player?.alternative_player === null || title?.player?.alternative_player === '')
-    return router.push('/not-found')
   
   const {player} = title
 
@@ -68,7 +65,7 @@ const [selectedValue, setSelectedValue] = useState('');
 
   return (
     <ScreenView>
-      <TitleItem title={title}/>
+      <TitleItem title={title} isDisabled={true}/>
       <View>
         <RNPickerSelect
           onValueChange={(value) => setSelectedValue(value)}
