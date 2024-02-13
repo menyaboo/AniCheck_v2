@@ -12,7 +12,6 @@
         "APP_KEY": "base64:GpuJtmbLPnITB+ArSuqnnI+Gb5Kb+R+uHmXiqvpbSfA=",
         "APP_ENV": "production",
         "APP_DEBUG": "true",
-        //"APP_URL": "https://anime-check-v2.com",
 
         "DB_CONNECTION": "sqlite",
         "DB_DATABASE": "database/mydb.sqlite",
