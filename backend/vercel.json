@@ -13,6 +13,13 @@
         "APP_DEBUG": "true",
         "APP_URL": "https://anime-check-v2.com",
 
+        "DB_CONNECTION": "pgsql",
+        "DB_HOST": "ep-floral-cherry-a5fg31g9.us-east-2.aws.neon.tech",
+        "DB_PORT": 5432,
+        "DB_DATABASE": "ani-check-v2",
+        "DB_USERNAME": "menyaboo",
+        "DB_PASSWORD": "9DdglqJw7GTs",
+
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
         "APP_PACKAGES_CACHE": "/tmp/packages.php",
