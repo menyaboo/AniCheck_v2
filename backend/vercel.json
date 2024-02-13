@@ -15,8 +15,8 @@
         "APP_URL": "https://anime-check-v2.com",
 
         "DB_CONNECTION": "pgsql",
-        "DB_HOST": "postgres://default:Sn4XhyR9IzdQ@ep-frosty-salad-a4w4g7eu-pooler.us-east-1.aws.neon.tech/verceldb?sslmode=require",
-        "DB_PORT": "5432",
+        "DATABASE_URL": "postgres://default:Sn4XhyR9IzdQ@ep-frosty-salad-a4w4g7eu-pooler.us-east-1.aws.neon.tech:5432/verceldb?sslmode=require",
+        "DB_HOST": "ep-frosty-salad-a4w4g7eu-pooler.us-east-1.aws.neon.tech",
         "DB_DATABASE": "verceldb",
         "DB_USERNAME": "default",
         "DB_PASSWORD": "Sn4XhyR9IzdQ",
