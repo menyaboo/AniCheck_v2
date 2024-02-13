@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'mysql'),
+    'default' => env('DB_CONNECTION', 'mongodb'),
 
     /*
     |--------------------------------------------------------------------------
@@ -93,7 +93,12 @@ return [
             // 'trust_server_certificate' => env('DB_TRUST_SERVER_CERTIFICATE', 'false'),
         ],
 
-    ],
+        'mongodb' => [
+            'driver' => 'mongodb',
+            'dsn' => env('DB_URI', 'mongodb+srv://ani-check-v2:p81LPS78vN43rRpe@cluster0.78q1ckg.mongodb.net/?retryWrites=true&w=majority'),
+            'database' => 'test',
+        ]
+],
 
     /*
     |--------------------------------------------------------------------------
