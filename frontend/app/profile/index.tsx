@@ -11,6 +11,7 @@ import {RootState} from "../../src/store";
 import React from "react";
 import {Button} from "../../src/components/Button";
 import {router} from "expo-router";
+import { Image } from 'react-native';
 
 const ProfilePage = () => {
   const user = useSelector((state: RootState) => state.auth.user);
@@ -18,8 +19,10 @@ const ProfilePage = () => {
   if (!user)
     return (
       <CentredView style={{gap: 10}}>
-        <Button value="Регистрация" onPress={() => router.push('/registration')}/>
+        <Image style={{width: 200, height: 200, borderRadius: 30}} source={require('../../assets/hello.jpg')} />
+        <Text $size="h2">Добро пожаловать!</Text>
         <Button value="Войти" onPress={() => router.push('/login')}/>
+        <Button value="Регистрация" onPress={() => router.push('/registration')}/>
       </CentredView>
     )
 

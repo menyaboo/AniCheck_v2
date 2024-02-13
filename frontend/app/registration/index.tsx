@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import {View, StyleSheet, Alert} from 'react-native';
+import {View, Image, Alert} from 'react-native';
+import {RegistrationView, RegistrationInput} from './style';
 import {Text, TextInput} from '../../src/styles/global';
 import {Button} from "../../src/components/Button";
 import {useRegisterUserMutation} from "../../src/services/authApi";
@@ -20,31 +21,34 @@ const Registration = () => {
   };
 
   return (
-    <View>
-      <Text>Логин:</Text>
-      <TextInput
-        value={login}
-        onChangeText={setLogin}
-        placeholder="Enter your login"
+    <RegistrationView>
+       <Image style={{width: 150, height: 150, borderRadius: 30}} source={require('../../assets/hi.jpg')} />
+      
+      <Text $size="h2">Регистрация</Text>
+
+      <RegistrationInput
+        value={name}
+        onChangeText={setName}
+        placeholder="Введите никнейм"
       />
 
-      <Text>Пароль:</Text>
-      <TextInput
+      <RegistrationInput
+        value={login}
+        onChangeText={setLogin}
+        placeholder="Введите логин"
+      />
+
+      <RegistrationInput
         value={password}
         onChangeText={setPassword}
-        placeholder="Enter your password"
+        placeholder="Введите пароль"
         secureTextEntry={true}
       />
 
-      <Text>Никнейм:</Text>
-      <TextInput
-        value={name}
-        onChangeText={setName}
-        placeholder="Enter your name"
-      />
-
       <Button value="Зарегистрироваться" onPress={handleSubmit} />
-    </View>
+
+     
+    </RegistrationView>
   );
 };
 
