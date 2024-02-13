@@ -9,6 +9,7 @@
         "dest": "/api/index.php"
     }],
     "env": {
+        "APP_KEY": "base64:GpuJtmbLPnITB+ArSuqnnI+Gb5Kb+R+uHmXiqvpbSfA=",
         "APP_ENV": "production",
         "APP_DEBUG": "true",
         "APP_URL": "https://anime-check-v2.com",
