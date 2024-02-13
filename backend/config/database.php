@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'mongodb'),
+    'default' => env('DB_CONNECTION', 'sqlite'),
 
     /*
     |--------------------------------------------------------------------------
@@ -65,17 +65,17 @@ return [
 
         'pgsql' => [
             'driver' => 'pgsql',
-            'url' => env('DATABASE_URL', 'postgres://default:Sn4XhyR9IzdQ@ep-frosty-salad-a4w4g7eu-pooler.us-east-1.aws.neon.tech:5432/verceldb'),
-            'host' => env('DB_HOST', 'ep-frosty-salad-a4w4g7eu-pooler.us-east-1.aws.neon.tech'),
+            'url' => env('DATABASE_URL'),
+            'host' => env('DB_HOST', '127.0.0.1'),
             'port' => env('DB_PORT', '5432'),
-            'database' => env('DB_DATABASE', 'verceldb'),
-            'username' => env('DB_USERNAME', 'default'),
-            'password' => env('DB_PASSWORD', 'Sn4XhyR9IzdQ'),
+            'database' => env('DB_DATABASE', 'forge'),
+            'username' => env('DB_USERNAME', 'forge'),
+            'password' => env('DB_PASSWORD', ''),
             'charset' => 'utf8',
             'prefix' => '',
             'prefix_indexes' => true,
             'search_path' => 'public',
-            'sslmode' => 'require',
+            'sslmode' => 'prefer',
         ],
 
         'sqlsrv' => [
@@ -92,12 +92,6 @@ return [
             // 'encrypt' => env('DB_ENCRYPT', 'yes'),
             // 'trust_server_certificate' => env('DB_TRUST_SERVER_CERTIFICATE', 'false'),
         ],
-
-        'mongodb' => [
-            'driver' => 'mongodb',
-            'dsn' => env('DB_URI', 'mongodb+srv://ani-check-v2:p81LPS78vN43rRpe@cluster0.78q1ckg.mongodb.net/?retryWrites=true&w=majority'),
-            'database' => 'test',
-        ]
 ],
 
     /*

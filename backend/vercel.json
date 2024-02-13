@@ -12,14 +12,11 @@
         "APP_KEY": "base64:GpuJtmbLPnITB+ArSuqnnI+Gb5Kb+R+uHmXiqvpbSfA=",
         "APP_ENV": "production",
         "APP_DEBUG": "true",
-        "APP_URL": "https://anime-check-v2.com",
+        //"APP_URL": "https://anime-check-v2.com",
 
-        "DB_CONNECTION": "pgsql",
-        "DATABASE_URL": "postgres://default:Sn4XhyR9IzdQ@ep-frosty-salad-a4w4g7eu-pooler.us-east-1.aws.neon.tech:5432/verceldb?sslmode=require",
-        "DB_HOST": "ep-frosty-salad-a4w4g7eu-pooler.us-east-1.aws.neon.tech",
-        "DB_DATABASE": "verceldb",
-        "DB_USERNAME": "default",
-        "DB_PASSWORD": "Sn4XhyR9IzdQ",
+        "DB_CONNECTION": "sqlite",
+        "DB_DATABASE": "database/mydb.sqlite",
+        "DB_FOREIGN_KEYS": "true",
 
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
